@@ -30,6 +30,8 @@ Example:
 ````java
 
 RedG redG = new RedG();
+// or when customizing many things, consider using the RedGBuilder class
+// RedG redG = new RedGBuilder<RedG>().build();
 
 // either 
 GTeacher mathTeacher = redG.addTeacher()

@@ -224,14 +224,15 @@ import com.btc.redg.runtime.AbstractRedG;
 public class DemoTestData {
 
     public AbstractRedG getDataSet() {
-        RedG redG = new RedG();
 
         PluggableDefaultValueStrategy strategy = new PluggableDefaultValueStrategy.Builder()
             .use(new IncrementingNumberProvider())
             .use(new CurrentDateProvider())
             .use(new CostantStringProvider("Example"));
 
-        redG.setDefaultValueStrategy(strategy);
+        RedG redG = new RedGBuilder<RedG>()
+            .withDefaultValueStrategy(strategy)
+            .build();
 
         GDemoBankAccount companyBankAccount = redG.addDemoBankAccount()
                 .bic("ONEPIZZAPLZ")
