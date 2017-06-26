@@ -69,7 +69,8 @@ PluggableDefaultValueStrategy strategy = new PluggableDefaultValueStrategy.Build
 ````
 
 Take a look at the Javadoc for `com.btc.redg.runtime.defaultvalues.pluggable.buildermatchers.Matchers` and 
-`com.btc.redg.runtime.defaultvalues.pluggable.buildermatchers.Conditions` for all available conditions to use in the `.when()` part.
+`com.btc.redg.runtime.defaultvalues.pluggable.buildermatchers.Conditions` for all available conditions to use in the `.when()` part. As the `.when()` method 
+expects a `Predicate<ColumnModel>`, you can easily implement a custom system.
 
 ### Custom provider implementation
 
