@@ -26,7 +26,7 @@ The generation is a three-step process:
 ### Obtain the TableModels
 
 There are multiple ways of obtaining the `TableModel`s for your database schema.
-RedG writes a serializes table model into every generated entity class code.
+RedG writes a serialized table model into every generated entity class code.
 
 These can be accessed at runtime via the static `getTableModel()` method.
 If the generated classes are either not yet compiled or compiled but not loaded
