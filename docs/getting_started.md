@@ -1,6 +1,6 @@
 # Getting started
-This chapter will guide you through your first project with RedG. You'll use RedG via the [RedG Maven Plugin](integration/maven_plugin.md) and integrate it into a JUnit unit test.
-If you don't use Maven or JUnit, take a look at the chapter [Integration](integration/index.md) and choose the appropriate integration for your project.
+This chapter will guide you through your first project with RedG. You'll use RedG via the [RedG Maven Plugin](integration/maven_plugin.md) and integrate it 
+into a unit test.
 
 ## Installation and configuration
 
@@ -128,7 +128,7 @@ dependencies {
 
 With RedG installed and set up, you can now prepare everything for the first code generation. If you followed the steps above, you'll need two more files before RedG can generate code for your database schema: `src/test/resources/create-schema.sql` and `src/test/resources/mappings.json`.
 
-### SQL preparation script
+### SQL Schema Script
 
 In order to generate the code for the schema, RedG needs a live database running that schema. As this example uses a H2 in-memory database, all the tables have to be created first. Create the file `src/test/resources/create-schema.sql` and fill it with your DDL statements.
 
@@ -175,7 +175,7 @@ This SQL code will create a schema that looks like this:
 ![The demo schema](img/demo-schema.png)
 <span class="image-caption">The demo schema</span>
 
-### Type mappings
+### Type Mappings
 
 When analysing a database schema, RedG always tries to find an appropriate Java data type for a column. There are three cases, where this might not be enough:
 
@@ -210,57 +210,39 @@ By now everything is ready for the first round of code generation. If you are us
 ![The generated code](img/demo-generated-code.png)
 <span class="image-caption">The generated code</span>
 
-## Test data specification
+## Test Data Specification
 
-Now that RedG has generated the entity classes, you can start to specify your test data. A good approach to specifying your test data in smaller projects is to create public methods in classes with a default constructor that return an `AbstractRedG`. Inside these methods you instantiate a `RedG` object, setup the default value providers, specify your data and return the filled `RedG` object.
+Now that RedG has generated the entity classes, you can create a RedG instance. 
+A good approach is to create a factory that will create `RedG` instances, so you don't have to configure the RedG instance every time you need one. 
 
 An example for some test data:
 ```java
-import com.btc.redg.generated.*;
-import com.btc.redg.runtime.defaultvalues.pluggable.*;
-import com.btc.redg.runtime.AbstractRedG;
+public class MyRedGFactory {
 
-public class DemoTestData {
-
-    public AbstractRedG getDataSet() {
-
-        PluggableDefaultValueStrategy strategy = new PluggableDefaultValueStrategy.Builder()
-            .use(new IncrementingNumberProvider())
-            .use(new CurrentDateProvider())
-            .use(new CostantStringProvider("Example"));
-
-        RedG redG = new RedGBuilder<RedG>()
-            .withDefaultValueStrategy(strategy)
-            .build();
-
-        GDemoBankAccount companyBankAccount = redG.addDemoBankAccount()
-                .bic("ONEPIZZAPLZ")
-                .iban("DE13109817441665870952");
-        GDemoBankAccount userBankAccount = redG.addDemoBankAccount()
-                .bic("THEREYOUGO1")
-                .iban("DE55617403662248482423");
-        GDemoCompany smallCompany = redG.addDemoCompany(companyBankAccount)
-                .countryCode("DE")
-                .name("Spielwarenfachgeschäft Müller");
-        IntStream.rangeClosed(1, 5).forEach(i -> {
-            redG.addDemoUser(userBankAccount)
-                    .username("user" + i)
-                    .company(smallCompany);
-        });
-        GDemoCompany dummy = redG.dummyDemoCompany();
-        redG.addDemoUser(dummy.bankAcc()).username("Diana_Dummy").company(dummy);
-
+    public RedG createRedG() {
+        RedG redG = new RedG();
+        redG.setDefaultValueStrategy(createDefaultValueStrategy());
         return redG;
+    }
+
+    private DefaultValueStrategy createDefaultValueStrategy() {
+        DefaultValueStrategyBuilder builder = new DefaultValueStrategyBuilder();
+
+        builder.whenColumnNameMatches("ID")
+                .thenUseProvider(new IncrementingNumberProvider());
+        builder.whenTableNameMatches(".*CARD").andColumnNameMatches("TYPE")
+                .thenUse("MASTERCARD");
+        builder.when(columnModel -> columnModel.getDbFullTableName().equals("CCM.CREDITCARD.UUID"))
+                .thenCompute((columnModel, expectedType) -> UUID.randomUUID().toString());
+        // ...
+
+        return builder.build();
     }
 }
 ```
 
-## JUnit integration
-
-There are multiple ways to integrate your test data specification into your JUnit tests, but for this guide the most simple approach is
-recommended. It is very simple and does not need further dependencies. Just call your test data specification method, open a JDBC connection and 
-call `AbstractRedG.insertDataIntoDatabase(Connection)`. In most cases this dead simple approach is all you need. 
-If you want to use RedG in a bigger project, consider some of the other [integration possibilities](integration/index.md#redg-runtime).
+Now you can model your test data. You might end up inlining the test data into your unit tests if it is not too complex.
+To make RedG insert the modeled data into the database, call `AbstractRedG.insertDataIntoDatabase(Connection)`. In most cases this dead simple approach is all you need. 
 
 Example:
 ```java
@@ -270,10 +252,26 @@ public class DemoTest {
 
     @Test
     public void testStuff() throws Exception {
+        
+        // instantiate RedG
+        RedG redG = new MyRedGFactory().createRedG();
+        
+        // create some test data 
+        GDemoBankAccount companyBankAccount = redG.addDemoBankAccount()
+                .iban("DE13109817441665870952");
+        GDemoCompany smallCompany = redG.addDemoCompany(companyBankAccount)
+                .countryCode("DE")
+                .name("Spielwarenfachgeschäft Müller");
+        redG.addDemoUser(redG.dummyDemoBankAccount)
+                .username("Diana_Dummy")
+                .company(smallCompany);
+        
+        // insert the data into the database
         Connection connection = ...;
         new DemoTestData().getDataSet().insertDataIntoDatabase(connection);
 
-        // perform your test
+        // perform your actual test against the database...
+        ...
     }
 
 }

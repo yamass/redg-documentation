@@ -1,6 +1,6 @@
 # Integration
 
-How you integrate RedG into you project depends on your build system and personal preferences. RedG is very flexible and
+The way you integrate RedG into you project depends on your build system and personal preferences. RedG is very flexible and
 can easily be adapted to fit your project.
 
 ## RedG code generator
@@ -29,5 +29,4 @@ All of the following integration possibilities require the following dependency:
 ````
 
 After you have specified your test data you can insert them with the [runtime API](runtime_api.md). This approach
-offers absolute flexibility abnd can easily be integrated into JUnit, Spring or whatever awesome frameworks your project
-is using.
+offers absolute flexibility and can easily be integrated into any Java project.
