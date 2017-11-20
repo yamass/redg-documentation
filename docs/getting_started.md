@@ -242,7 +242,7 @@ public class MyRedGFactory {
 ```
 
 Now you can model your test data. You might end up inlining the test data into your unit tests if it is not too complex.
-To make RedG insert the modeled data into the database, call `AbstractRedG.insertDataIntoDatabase(Connection)`. In most cases this dead simple approach is all you need. 
+To make RedG insert the modeled data into the database, call `AbstractRedG.insertDataIntoDatabase(...)`. In most cases this dead simple approach is all you need. 
 
 Example:
 ```java
@@ -266,9 +266,8 @@ public class DemoTest {
                 .username("Diana_Dummy")
                 .company(smallCompany);
         
-        // insert the data into the database
-        Connection connection = ...;
-        new DemoTestData().getDataSet().insertDataIntoDatabase(connection);
+        // insert the data into the database using a javax.sql.DataSource
+        new DemoTestData().getDataSet().insertDataIntoDatabase(dataSource); 
 
         // perform your actual test against the database...
         ...

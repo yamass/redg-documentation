@@ -10,7 +10,7 @@ The runtime API can be used to either
  
 ## Using PreparedStatements
 
-To insert the of a RedG instance into a database, call the `insertDataIntoDatabase` method and provide a JDBC connection.
+To insert the of a RedG instance into a database, call the `insertDataIntoDatabase()` method and provide a JDBC connection.
 
 !!! note
     You might need to use a custom 
