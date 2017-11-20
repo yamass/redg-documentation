@@ -4,14 +4,18 @@ source: DefaultValueStrategy.java
         DefaultDefaultValueStrategy.java
         pluggable/PluggableDefaultValueStrategy.java
 
-# Default value strategy
+# DefaultValueStrategy
 
-The default value strategy is one of RedGs best features, and like most of RedG can be customized to fit your 
-requirements. Out-of-the-box RedG provides two default value strategies: The `DefaultDefaultValueStrategy`, a 
-minimalistic strategy, and the `PluggableDefaultValueStrategy`, a plug-in system that can be extended by 
-either provided or custom plug-ins.
+The default value strategy is one of RedGs most important features, and like most of RedG can be customized to fit your 
+requirements. 
 
-## Default default value strategy
+The default implementation is `DefaultDefaultValueStrategy`. It delivers null for any nullable columns and a fixed non-null 
+value for `NOT NULL` columns. However, most of the time, the `DefaultDefaultValueStrategy` will _not_ completely meet your needs. 
+
+You could easily write your own `DefaultValueStrategy` from scratch, but we recommend using the `DefaultValueStrategyBuilder`.
+It provides a convenient and clear API for creating custom `DefaultValueStrategy`s.
+
+## DefaultDefaultValueStrategy
 
 RedG's default default value strategy supports the following data types and provides a fixed default value for them.
 
@@ -36,7 +40,30 @@ If a column is a primary key or has a unique constraint, a value that is unique 
 | everything extending `java.util.Date` | Counting up milliseconds since unix epoch, starting at `0` | until year 8099 |
 | Java 8 date types |  Counting up milliseconds since unix epoch, starting at `0` | until year 8099 |
 
-## Pluggable default value strategy
+## DefaultValueStrategyBuilder
+
+`DefaultValueStrategyBuilder` is the recommended way of creating `DefaultValueStrategy`s. It provides a convenient and clear API
+for creating `DefaultValueStrategy`s. 
+
+````java
+DefaultValueStrategyBuilder builder = new DefaultValueStrategyBuilder();
+
+builder.whenColumnNameMatches("ID")
+        .thenUseProvider(new IncrementingNumberProvider());
+builder.whenTableNameMatches(".*CARD").andColumnNameMatches("TYPE")
+        .thenUse("MASTERCARD");
+builder.when(columnModel -> columnModel.getDbFullTableName().equals("CCM.CREDITCARD.UUID"))
+        .thenCompute((columnModel, expectedType) -> UUID.randomUUID().toString());
+
+builder.build();
+````
+
+By default `DefaultValueStrategyBuilder` will add a `DefaultDefaultValueStrategy` as fallback value provider. However, you can change this using 
+`DefaultValueStrategyBuilder.setFallbackStrategy(DefaultValueStrategy)`.
+
+## PluggableDefaultValueStrategy
+
+This is the `DefaultValueStrategy` implementation that the `DefaultValueStrategyBuilder` uses internally.
 
 The `PluggableDefaultValueStrategy` has a list of `PluggableDefaultValueProvider`s. When a default value needs to be
 generated, it checks whether a provider can provide a default value for the required data type / table / column. 
@@ -57,20 +84,6 @@ The following providers are bundles with RedG:
 | `ConditionalProvider` | Encapsulates another provider and will only return its value if the regular expressions for table & column name match. |
 | `CustomConditionalProvider` | A conditional provider that is even more flexible that the `ConditionalProvider`. Is used by the builder system. |
 | `DefaultDefaultValueProvider` | A provider encapsulating the `DefaultDefaultValueStrategy`. Use for fallback purposes. |
-
-You can use the `PluggableDefaultValueStrategy.Builder()` class to easily build a highly customized system:
-
-````java
-PluggableDefaultValueStrategy strategy = new PluggableDefaultValueStrategy.Builder()
-    .use(new IncrementingNumberProvider()).when(columnName(contains("_ID")))
-    .use(new StaticNumberProvider(42))
-    .useDefault() // shortcut for a DefaultDefaultValueProvider, perfect as fallback
-    .build();
-````
-
-Take a look at the Javadoc for `com.btc.redg.runtime.defaultvalues.pluggable.buildermatchers.Matchers` and 
-`com.btc.redg.runtime.defaultvalues.pluggable.buildermatchers.Conditions` for all available conditions to use in the `.when()` part. As the `.when()` method 
-expects a `Predicate<ColumnModel>`, you can easily implement a custom system.
 
 ### Custom provider implementation
 
