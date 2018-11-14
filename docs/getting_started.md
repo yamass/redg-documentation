@@ -4,7 +4,7 @@ into a unit test.
 
 ## Installation and configuration
 
-If your project can process Maven artifacts, the installation is quite straightforward. RedG is available on Maven Central. The newest stable version is **1.1.2**
+If your project can process Maven artifacts, the installation is quite straightforward. RedG is available on Maven Central. The newest stable version is **2.0**
 See [here](https://mvnrepository.com/artifact/com.btc-ag.redg) for an overview of all RedG Maven artifacts and the newest versions.
 
 ### Maven
@@ -16,20 +16,20 @@ Include `junit` for the unit tests.
     <dependency>
         <groupId>com.btc-ag.redg</groupId>
         <artifactId>redg-runtime</artifactId>
-        <version>1.1.2</version>
+        <version>2.0</version>
         <scope>test</scope>
     </dependency>
     <!-- optional, for visualization only -->
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-core</artifactId>
-        <version>2.8.5</version>
+        <version>2.9.7</version>
         <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>2.8.5</version>
+        <version>2.9.7</version>
         <scope>test</scope>
     </dependency>
     <!-- for the unit tests -->
@@ -49,7 +49,7 @@ Now include the RedG Maven Plugin (`redg-maven-plugin`) and configure it. You mi
 <plugin>
     <groupId>com.btc-ag.redg</groupId>
     <artifactId>redg-maven-plugin</artifactId>
-    <version>1.1.2</version>
+    <version>2.0</version>
     <executions>
         <execution>
             <id>redg-generate</id>
@@ -89,7 +89,7 @@ Now include the RedG Maven Plugin (`redg-maven-plugin`) and configure it. You mi
         <dependency>
             <groupId>us.fatehi</groupId>
             <artifactId>schemacrawler-oracle</artifactId>
-            <version>14.16.01</version>
+            <version>15.01.06</version>
         </dependency>
         -->
     </dependencies>
@@ -114,11 +114,11 @@ The RedG runtime can be included as a dependency.
 
 ```groovy
 dependencies {
-    testCompile group: 'com.btc-ag.redg', name: 'redg-runtime', version '1.1.2'
+    testCompile group: 'com.btc-ag.redg', name: 'redg-runtime', version '2.0'
 
     // optional, only for visualization support
-    testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.5'
-    testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.5'
+    testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'
+    testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
 
     // testing framework
     testCompile group: 'junit', name: 'junit', version: '4.11'

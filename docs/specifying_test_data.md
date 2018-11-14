@@ -30,7 +30,7 @@ Example:
 ````java
 
 RedG redG = new RedG();
-// or when customizing many things, consider using the RedGBuilder class
+// or when customizing many internal things, consider using the RedGBuilder class
 // RedG redG = new RedGBuilder<RedG>().build();
 
 // either 
@@ -123,7 +123,7 @@ it.
 
 Example:
 ````java
-GTeacher euklid = redG.existingWizard(4); // 4 is value of primary id column
+GTeacher euklid = redG.existingTeacher(4); // 4 is value of primary id column
 
 // use euklid just like normal for references, just don't try to modify him or read values other the primary keys
 
@@ -132,3 +132,22 @@ euklid.isDead(false);
 
 redG.addMemorialDay(euklid) // works just like expected
 ````
+
+## Self-references / Circular dependencies
+
+RedG supports self-references via the `RedG#entitySelfReference()` method. If you have a schema like
+
+```sql
+create table TREE_ELEMENT (
+  ID number(19) not null primary key,
+  VALUE varchar2(50 char),
+  PARENT_ID number(19) not null,
+
+  constraint FK_TREE_ELEMENT_PARENT foreign key (PARENT_ID) REFERENCES TREE_ELEMENT(ID)
+);
+```
+
+you can simply create a root element referencing itself as the parent with `redg.addTreeElement(redg.entitySelfReference()).value("Root")`.
+
+
+Other circular references and dependencies are currently not supported by RedG. If you really do need this, the best way would be to break open the circle in one place in the specified test data and then "close" the circle with a manual INSERT after you inserted the test data.

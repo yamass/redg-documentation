@@ -12,7 +12,7 @@ To use the API, simply include the following Maven dependency:
 <dependency>
     <groupId>com.btc-ag.redg</groupId>
     <artifactId>redg-generator</artifactId>
-    <version>1.0.15</version>
+    <version>2.0</version>
 </dependency>
 ````
 

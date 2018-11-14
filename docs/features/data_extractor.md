@@ -47,6 +47,10 @@ These two methods take three parameters:
 Obtain a connection to your database and call `new DataExtractor().extractAllData( connection, tableModels)`.
 `tableModels` should be the list of `TableModel`s from the previous step.
 
+!!! note
+	If the database you are extracting from is not the same you generated the RedG code from, you might have to change the schema name.
+	To do so, use `DataExtractor#setSqlSchema(String schema)` to specify the schema name.
+
 Save the result in a list of `EntityModel`s for the next step.
 
 !!! note
@@ -57,7 +61,7 @@ Save the result in a list of `EntityModel`s for the next step.
 
 Using the `EntityModel`s you can now call `new CodeGenerator().generateCode( codePackageName, redGClassName, codeClassName, entityModels)`
 
-This will return the Java code as a String.
+This will return the Java code as a String. The generated code will be in the default package, so you might need to add your own `package x.y.z` statement at the top.
 
 The `generateCode` method takes four parameters:
 
