@@ -5,7 +5,7 @@ into a unit test.
 ## Installation and configuration
 
 If your project can process Maven artifacts, the installation is quite straightforward. RedG is available on Maven Central. The newest stable version is **2.0**
-See [here](https://mvnrepository.com/artifact/com.btc-ag.redg) for an overview of all RedG Maven artifacts and the newest versions.
+See [here](https://mvnrepository.com/artifact/de.yamass.redg) for an overview of all RedG Maven artifacts and the newest versions.
 
 ### Maven
 Add the dependency for the `redg-runtime`. If you want to use the visualization feature to debug your application, include `jackson-core` and `jackson-databind`.
@@ -14,7 +14,7 @@ Include `junit` for the unit tests.
 ```xml
 <dependencies>
     <dependency>
-        <groupId>com.btc-ag.redg</groupId>
+        <groupId>de.yamass.redg</groupId>
         <artifactId>redg-runtime</artifactId>
         <version>2.0</version>
         <scope>test</scope>
@@ -47,7 +47,7 @@ Now include the RedG Maven Plugin (`redg-maven-plugin`) and configure it. You mi
 
 ```xml
 <plugin>
-    <groupId>com.btc-ag.redg</groupId>
+    <groupId>de.yamass.redg</groupId>
     <artifactId>redg-maven-plugin</artifactId>
     <version>2.0</version>
     <executions>
@@ -114,7 +114,7 @@ The RedG runtime can be included as a dependency.
 
 ```groovy
 dependencies {
-    testCompile group: 'com.btc-ag.redg', name: 'redg-runtime', version '2.0'
+    testCompile group: 'de.yamass.redg', name: 'redg-runtime', version '2.0'
 
     // optional, only for visualization support
     testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.7'

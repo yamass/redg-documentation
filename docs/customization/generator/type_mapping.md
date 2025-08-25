@@ -1,5 +1,5 @@
 description: Documentation for the custom type mapping for the RedG code generator
-path: tree/master/redg-generator/src/main/java/com/btc/redg/generator/extractor/datatypeprovider
+path: tree/main/redg-generator/src/main/java/de/yamass/redg/generator/extractor/datatypeprovider
 source: DataTypeProvider.java
         DefaultDataTypeProvider.java
         json/JsonFileDataTypeProvider.java

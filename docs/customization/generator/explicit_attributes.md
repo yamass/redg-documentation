@@ -1,5 +1,5 @@
 description: Documentation for the explicit attribute and foreign key feature for the RedG code generator
-path: tree/master/redg-generator/src/main/java/com/btc/redg/generator/extractor/explicitattributedecider
+path: tree/main/redg-generator/src/main/java/de/yamass/redg/generator/extractor/explicitattributedecider
 source: ExplicitAttributeDecider.java
         DefaultExplicitAttributeDecider.java
         JsonFileExplicitAttributeDecider.java

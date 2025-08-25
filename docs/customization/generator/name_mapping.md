@@ -1,5 +1,5 @@
 description: Documentation for the custom name mapping for the RedG code generator
-path: tree/master/redg-generator/src/main/java/com/btc/redg/generator/extractor/nameprovider
+path: tree/main/redg-generator/src/main/java/de/yamass/redg/generator/extractor/nameprovider
 source: NameProvider.java
         DefaultNameProvider.java
         MultiProviderNameProvider.java

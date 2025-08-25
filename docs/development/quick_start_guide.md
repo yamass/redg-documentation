@@ -1,16 +1,14 @@
-# Quick Start Guide
+# Contributing
 
 This is a quick start guide for the development of RedG. If you want to use RedG in your project, see [here](../getting_started.md).
 
 !!! info
-    RedG was developed for internal usage in projects of the BTC Business Technology Consulting AG.
-    Further development will mainly be driven by the needs of the internal projects using RedG.
     If you require a feature, either open an issue and hope it might get implemented or feel free to 
     fork our repository, implement it yourself and create a pull request.
     
 ## Project setup
 
-Clone the Git-Repository (`git@github.com:btc-ag/redg.git` or your HTTPS link). RedG uses Maven 
+Clone the Git-Repository (`git@github.com:yamass/redg.git` or your HTTPS link). RedG uses Maven 
 for development and you can simply import the main `pom.xml` in your favorite IDE.
 
 The main project has 6 sub-projects:

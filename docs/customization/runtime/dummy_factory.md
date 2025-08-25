@@ -1,5 +1,5 @@
 description: Documentation for the DummyFactory of the RedG runtime, how it can be extended or replaced
-path: tree/master/redg-runtime/src/main/java/com/btc/redg/runtime/dummy
+path: tree/main/redg-runtime/src/main/java/de/yamass/redg/runtime/dummy
 source: DummyFactory.java
         DefaultDummyFactory.java
         DummyPostProcessor.java
@@ -14,7 +14,7 @@ There are two main reasons to modify or extend the existing dummy generation sys
  * You want to modify the generated dummy entities
  * RedG cannot generate the dummy entities for some reason
  
-If the latter occurs, feel free to open an [issue](https://gitlab.com/btc-redg/redg/issues/new) and we might try to 
+If the latter occurs, feel free to open an [issue](https://github.com/yamass/redg/issues/new) and we might try to 
 implement support for your case.
 
 ## Implement own DummyFactory

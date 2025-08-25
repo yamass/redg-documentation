@@ -1,5 +1,5 @@
 description: Documentation for the default value strategy of the RedG runtime, how it can be extended or replaced
-path: tree/master/redg-runtime/src/main/java/com/btc/redg/runtime/defaultvalues
+path: tree/main/redg-runtime/src/main/java/de/yamass/redg/runtime/defaultvalues
 source: DefaultValueStrategy.java
         DefaultDefaultValueStrategy.java
         pluggable/PluggableDefaultValueStrategy.java

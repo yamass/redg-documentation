@@ -1,5 +1,5 @@
 description: Documentation for convenience setter method feature for the RedG code generator
-path: tree/master/redg-generator/src/main/java/com/btc/redg/generator/extractor/conveniencesetterprovider
+path: tree/main/redg-generator/src/main/java/de/yamass/redg/generator/extractor/conveniencesetterprovider
 source: ConvenienceSetterProvider.java
         DefaultConvenienceSetterProvider.java
         xml/XmlFileConvenienceSetterProvider.java
@@ -20,7 +20,7 @@ signature for a conversion method that transforms a string into some kind of dat
 
 The RedG runtime provides a converter that can convert a ISO-8601 formatted string into basically every Java date type
 (`java.util.Date, java.sql.Date, Time, Timestamp, LocalTime, LocalDate, LocalDateTime, ZonedDateTime, OffsetDateTime, OffsetTime`).
-To use it, specify `com.btc.redg.runtime.util.DateConverter.convertDate` as the fully qualified converter method name.
+To use it, specify `de.yamass.redg.runtime.util.DateConverter.convertDate` as the fully qualified converter method name.
 
 ## XML file
 
@@ -28,7 +28,7 @@ Use the `XmlFileConvenienceSetterProvider` class to load your XML file.
 
 In the XML you can specify multiple convenience setters for each original data type. The example XML specifies that every
 attribute of the type `java.util.Date` gets another setter accepting a `java.lang.String` and converting this string into a
-date with the `com.btc.redg.runtime.util.DateConverter.convertDate` method.
+date with the `de.yamass.redg.runtime.util.DateConverter.convertDate` method.
 
 If you want to restrict the convenience setters to certain tables / columns, you have to provide a 
 [custom implementation](#java-interface).
@@ -36,7 +36,7 @@ If you want to restrict the convenience setters to certain tables / columns, you
 ````xml
 <convenienceSetterConfig>
    <javaType name="java.util.Date">
-       <convenienceSetter setterJavaTypeName="java.lang.String" fullyQualifiedConverterMethodName="com.btc.redg.runtime.util.DateConverter.convertDate"/>
+       <convenienceSetter setterJavaTypeName="java.lang.String" fullyQualifiedConverterMethodName="de.yamass.redg.runtime.util.DateConverter.convertDate"/>
    </javaType>
 </convenienceSetterConfig>
 ````

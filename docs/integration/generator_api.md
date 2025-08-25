@@ -1,5 +1,5 @@
 description: Documentation for the code generator API
-path: tree/master/redg-generator/src/main/java/com/btc/redg/generator
+path: tree/main/redg-generator/src/main/java/de/yamass/redg/generator
 source: RedGGenerator.java
 
 # Code generator API
@@ -10,7 +10,7 @@ one big `generateCode` method that gives you access to every bit of customizatio
 To use the API, simply include the following Maven dependency:
 ````xml
 <dependency>
-    <groupId>com.btc-ag.redg</groupId>
+    <groupId>de.yamass.redg</groupId>
     <artifactId>redg-generator</artifactId>
     <version>2.0</version>
 </dependency>
@@ -21,7 +21,7 @@ list of all supported DBMS and their SchemaCrawler and plugins.
 
 See the [Javadoc](../../apidocs) or source code for a detailed description of every parameter of the `generateCode` method.
 If you like an example how to use this method, take a look at the 
-[Maven plugin source](https://gitlab.com/btc-redg/redg/tree/master/redg-maven-plugin/src/main/java/com/btc/redg/plugin/RedGGeneratorMojo.java).
+[Maven plugin source](https://github.com/yamass/redg/tree/main/redg-maven-plugin/src/main/java/de/yamass/redg/plugin/RedGGeneratorMojo.java).
 
 !!! note ""
     If even the standard API is not enough, take a look at the `RedGGenerator` source code. RedG is pretty modular

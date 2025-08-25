@@ -1,5 +1,5 @@
 description: Documentation for the SQL values formatter of the RedG runtime
-path: tree/master/redg-runtime/src/main/java/com/btc/redg/runtime/insertvalues
+path: tree/main/redg-runtime/src/main/java/de/yamass/redg/runtime/insertvalues
 source: SQLValuesFormatter.java
         DefaultSQLValuesFormatter.java
 

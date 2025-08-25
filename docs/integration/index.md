@@ -21,7 +21,7 @@ The RedG runtime library is available as a Maven dependency in the Maven Central
 All of the following integration possibilities require the following dependency:
 ````xml
 <dependency>
-    <groupId>com.btc-ag.redg</groupId>
+    <groupId>de.yamass.redg</groupId>
     <artifactId>redg-runtime</artifactId>
     <version>2.0</version>
     <scope>test</scope>

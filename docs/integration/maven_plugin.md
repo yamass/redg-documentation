@@ -1,5 +1,5 @@
 description: Documentation for the RedG Maven plugin
-path: tree/master/redg-maven-plugin/src/main/java/com/btc/redg/plugin
+path: tree/main/redg-maven-plugin/src/main/java/de/yamass/redg/plugin
 source: RedGGeneratorMojo.java
 
 # RedG Maven plugin
@@ -32,7 +32,7 @@ The list of the most commonly needed plugins (for full list, see in [Maven Centr
 
 ```xml
 <plugin>
-    <groupId>com.btc-ag.redg</groupId>
+    <groupId>de.yamass.redg</groupId>
     <artifactId>redg-maven-plugin</artifactId>
     <version>2.0</version>
     <executions>
@@ -67,7 +67,7 @@ The following table lists all configuration options of the RedG Maven plugin.
 | `<schemaRegex>` | `.*` | A regular expression to select all database schemas that will be included in the database analysis. |
 | `<tablesRegex>` | `.*` | A regular expression to select all the tables that will be included in the database analysis. If a table is excluded because it belongs to an exlcuded schema, it will **not** be included again. |
 | `<outputDirectory>` | `target/generated-test-sources/redg` | The output folder for the generated source code. Default value is Maven standard. |
-| `<targetPackage>` | `com.btc.redg.generated` | The java package of the to-be-generated entity classes. |
+| `<targetPackage>` | `de.yamass.redg.generated` | The java package of the to-be-generated entity classes. |
 | `<classPrefix>` | `G` | A prefix string that gets prepended to each entity class. |
 | `<allowPrimitiveTypes>` | `false` | By default RedG replaces primitive types with their wrapper classes (`int` to `Integer`, etc.). Set to `true` to disable this behavior. |
 | `<enableVisualizationSupport>` | `false` | If `true`, the generated code will support [visualization](../features/visualization.md) of the object graph |

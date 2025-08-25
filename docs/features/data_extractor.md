@@ -39,7 +39,7 @@ These two methods take three parameters:
 | Parameter | Explanation |
 | --------- | ----------- |
 | `directory` | The `Path` of the source code root, **without** the package structure folders |
-| `packageName` | The name of the Java package that was used during code generation. `com.btc.redg.generated` if not overwritten |
+| `packageName` | The name of the Java package that was used during code generation. `de.yamass.redg.generated` if not overwritten |
 | `classPrefix` | The class name prefix for the generated RedG classes. `G` by default |
 
 ### Extract all data
