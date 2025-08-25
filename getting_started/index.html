@@ -1,0 +1,1608 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../specifying_test_data/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Getting started - RedG User Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../css/style.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#getting-started" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="RedG User Documentation" class="md-header__button md-logo" aria-label="RedG User Documentation" data-md-component="logo">
+      
+  <img src="../img/logo_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            RedG User Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yamass/redg" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yamass/redg
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="RedG User Documentation" class="md-nav__button md-logo" aria-label="RedG User Documentation" data-md-component="logo">
+      
+  <img src="../img/logo_white.svg" alt="logo">
+
+    </a>
+    RedG User Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yamass/redg" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    yamass/redg
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RedG User Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation and configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-schema-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Schema Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Mappings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-data-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Data Specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-with-the-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with the visualizer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../specifying_test_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specifying test data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Features
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Features
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/dummy_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dummy data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/data_extractor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data extraction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/jpa_metamodel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JPA meta-model analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Integration
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code generator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Code generator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/maven_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maven plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/generator_api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code generator API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Runtime
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Runtime
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration/runtime_api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Runtime API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Customization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Customization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Code generator
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Code generator
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/generator/type_mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Type mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/generator/name_mapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Name mapping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/generator/explicit_attributes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explicit attributes & foreign keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/generator/convenience_setters/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convenience setter methods
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Runtime
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Runtime
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/runtime/default_value_strategy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Default value strategy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/runtime/sql_values_formatter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL values formatter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/runtime/prepared_statement_parameter_setter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PreparedStatement parameter setter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customization/runtime/dummy_factory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dummy factory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Development
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/quick_start_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/debugging_plugin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debugging Maven plugin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../compatibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compatibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-and-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation and configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation and configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sql-schema-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQL Schema Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type Mappings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code generation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-data-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test Data Specification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debugging-with-the-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging with the visualizer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>This chapter will guide you through your first project with RedG. You'll use RedG via the <a href="../integration/maven_plugin/">RedG Maven Plugin</a> and integrate it 
+into a unit test.</p>
+<h2 id="installation-and-configuration">Installation and configuration<a class="headerlink" href="#installation-and-configuration" title="Permanent link">&para;</a></h2>
+<p>If your project can process Maven artifacts, the installation is quite straightforward. RedG is available on Maven Central. The newest stable version is <strong>2.0</strong>
+See <a href="https://mvnrepository.com/artifact/de.yamass.redg">here</a> for an overview of all RedG Maven artifacts and the newest versions.</p>
+<h3 id="maven">Maven<a class="headerlink" href="#maven" title="Permanent link">&para;</a></h3>
+<p>Add the dependency for the <code>redg-runtime</code>. If you want to use the visualization feature to debug your application, include <code>jackson-core</code> and <code>jackson-databind</code>.
+Include <code>junit</code> for the unit tests.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>de.yamass.redg<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>redg-runtime<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;version&gt;</span>2.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- optional, for visualization only --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>jackson-core<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;version&gt;</span>2.9.7<span class="nt">&lt;/version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;version&gt;</span>2.9.7<span class="nt">&lt;/version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="cm">&lt;!-- for the unit tests --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">        </span><span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">        </span><span class="nt">&lt;version&gt;</span>4.11<span class="nt">&lt;/version&gt;</span>
+<span class="w">        </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div>
+
+<p>Now include the RedG Maven Plugin (<code>redg-maven-plugin</code>) and configure it. You might also need a JDBC driver if you want the schema analysis to run against a database other than H2. This driver needs to be added as a <strong>plugin dependency</strong>, not as a project dependency.</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;plugin&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>de.yamass.redg<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>redg-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>2.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;executions&gt;</span>
+<span class="w">        </span><span class="nt">&lt;execution&gt;</span>
+<span class="w">            </span><span class="nt">&lt;id&gt;</span>redg-generate<span class="nt">&lt;/id&gt;</span>
+<span class="w">            </span><span class="nt">&lt;phase&gt;</span>generate-test-sources<span class="nt">&lt;/phase&gt;</span><span class="w"> </span><span class="cm">&lt;!-- This plugin generates sources for the test code --&gt;</span>
+<span class="w">            </span><span class="nt">&lt;goals&gt;</span>
+<span class="w">                </span><span class="nt">&lt;goal&gt;</span>redg<span class="nt">&lt;/goal&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/goals&gt;</span>
+<span class="w">            </span><span class="nt">&lt;configuration&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- Provide database connection information. We&#39;ll just use a H2 in-memory database here --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;jdbcDriver&gt;</span>org.h2.Driver<span class="nt">&lt;/jdbcDriver&gt;</span>
+<span class="w">                </span><span class="nt">&lt;connectionString&gt;</span>jdbc:h2:mem:redg<span class="nt">&lt;/connectionString&gt;</span>
+<span class="w">                </span><span class="nt">&lt;username&gt;</span>sa<span class="nt">&lt;/username&gt;</span>
+<span class="w">                </span><span class="nt">&lt;password&gt;</span>sa<span class="nt">&lt;/password&gt;</span>
+<span class="w">                </span><span class="cm">&lt;!-- Alternative Oracle configuration:</span>
+<span class="cm">                &lt;jdbcDriver&gt;oracle.jdbc.OracleDriver&lt;/jdbcDriver&gt;</span>
+<span class="cm">                &lt;connectionString&gt;jdbc:oracle:thin:@localhost:1521:XE&lt;/connectionString&gt;</span>
+<span class="cm">                &lt;username&gt;system&lt;/username&gt;</span>
+<span class="cm">                &lt;password&gt;******&lt;/password&gt;</span>
+<span class="cm">                --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;enableVisualizationSupport&gt;</span>true<span class="nt">&lt;/enableVisualizationSupport&gt;</span><span class="w"> </span><span class="cm">&lt;!-- if true, needs jackson dependencies --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;sqlScripts&gt;</span><span class="w"> </span><span class="cm">&lt;!-- the SQL scripts to run before schema analysis --&gt;</span>
+<span class="w">                    </span><span class="nt">&lt;param&gt;</span>src/test/resources/create-schema.sql<span class="nt">&lt;/param&gt;</span>
+<span class="w">                </span><span class="nt">&lt;/sqlScripts&gt;</span>
+<span class="w">                </span><span class="nt">&lt;customTypeMappings&gt;</span>src/test/resources/mappings.json<span class="nt">&lt;/customTypeMappings&gt;</span><span class="w"> </span><span class="cm">&lt;!-- type mappings. Will be explained later --&gt;</span>
+<span class="w">                </span><span class="nt">&lt;schemaRegex&gt;</span>REDG<span class="nt">&lt;/schemaRegex&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/configuration&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/execution&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/executions&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- JDBC driver and SchemaCrawler extension, only if not using H2. Entry depends on DBMS --&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Example for Oracle DB:</span>
+<span class="cm">        &lt;dependency&gt;</span>
+<span class="cm">            &lt;groupId&gt;com.oracle&lt;/groupId&gt;</span>
+<span class="cm">            &lt;artifactId&gt;ojdbc6&lt;/artifactId&gt;</span>
+<span class="cm">            &lt;version&gt;11.2.0.3&lt;/version&gt;</span>
+<span class="cm">        &lt;/dependency&gt;</span>
+<span class="cm">        &lt;dependency&gt;</span>
+<span class="cm">            &lt;groupId&gt;us.fatehi&lt;/groupId&gt;</span>
+<span class="cm">            &lt;artifactId&gt;schemacrawler-oracle&lt;/artifactId&gt;</span>
+<span class="cm">            &lt;version&gt;15.01.06&lt;/version&gt;</span>
+<span class="cm">        &lt;/dependency&gt;</span>
+<span class="cm">        --&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div>
+
+<p>This is a minimal configuration for the Maven plugin. RedG will use an in-memory H2 database named <code>redg</code>. Before schema analysis the <code>create-schema.sql</code> script will be executed. This script will create the complete database schema. The plugin will analyze all tables within the <code>REDG</code> schema and generate code for these. </p>
+<p>The generated source code will have visualization support, so you can easily debug and visualize your test data.</p>
+<p>To show how the generated code can be customized, a custom type mapping is provided via a JSON file called <code>mappings.json</code>.</p>
+<p>For a detailed explanation of all parameters head over to <a href="../integration/maven_plugin/">here</a>.</p>
+<p>Continue <a href="#preparation">with the preparation</a> after you're done here.</p>
+<h3 id="gradle">Gradle<a class="headerlink" href="#gradle" title="Permanent link">&para;</a></h3>
+<p>Currently there is no Gradle plugin to generate the RedG entity code. See <a href="../integration/">here</a> for other ways to integrate the RedG code generator in your project.</p>
+<p>The RedG runtime can be included as a dependency.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="n">testCompile</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;de.yamass.redg&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;redg-runtime&#39;</span><span class="o">,</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s1">&#39;2.0&#39;</span>
+
+<span class="w">    </span><span class="c1">// optional, only for visualization support</span>
+<span class="w">    </span><span class="n">testCompile</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.fasterxml.jackson.core&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;jackson-core&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;2.9.7&#39;</span>
+<span class="w">    </span><span class="n">testCompile</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;com.fasterxml.jackson.core&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;jackson-databind&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;2.9.7&#39;</span>
+
+<span class="w">    </span><span class="c1">// testing framework</span>
+<span class="w">    </span><span class="n">testCompile</span><span class="w"> </span><span class="nl">group:</span><span class="w"> </span><span class="s1">&#39;junit&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">name:</span><span class="w"> </span><span class="s1">&#39;junit&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">version:</span><span class="w"> </span><span class="s1">&#39;4.11&#39;</span>
+
+<span class="o">}</span>
+</code></pre></div>
+
+<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
+<p>With RedG installed and set up, you can now prepare everything for the first code generation. If you followed the steps above, you'll need two more files before RedG can generate code for your database schema: <code>src/test/resources/create-schema.sql</code> and <code>src/test/resources/mappings.json</code>.</p>
+<h3 id="sql-schema-script">SQL Schema Script<a class="headerlink" href="#sql-schema-script" title="Permanent link">&para;</a></h3>
+<p>In order to generate the code for the schema, RedG needs a live database running that schema. As this example uses a H2 in-memory database, all the tables have to be created first. Create the file <code>src/test/resources/create-schema.sql</code> and fill it with your DDL statements.</p>
+<p>If you don't yet have a database schema or just want to tets RedG, feel free to use this little demo schema:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">SCHEMA</span><span class="w"> </span><span class="n">REDG</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">REDG</span><span class="p">.</span><span class="n">DEMO_BANK_ACCOUNT</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">BIC</span><span class="w">  </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">11</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">IBAN</span><span class="w"> </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">22</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_DEMO_BANK_ACCOUNT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">BIC</span><span class="p">,</span><span class="w"> </span><span class="n">IBAN</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">REDG</span><span class="p">.</span><span class="n">DEMO_COMPANY</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">COUNTRY_CODE</span><span class="w">      </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w">  </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">NAME</span><span class="w">              </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">30</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">REGISTRATION_DATE</span><span class="w"> </span><span class="k">TIMESTAMP</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ACC_BIC</span><span class="w">           </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">11</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ACC_IBAN</span><span class="w">          </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">22</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">PK_DEMO_COMPANY</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">COUNTRY_CODE</span><span class="p">,</span><span class="w"> </span><span class="n">NAME</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">FK_DEMO_COMPANY_BANK_ACC</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ACC_BIC</span><span class="p">,</span><span class="w"> </span><span class="n">ACC_IBAN</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">DEMO_BANK_ACCOUNT</span><span class="w"> </span><span class="p">(</span><span class="n">BIC</span><span class="p">,</span><span class="w"> </span><span class="n">IBAN</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">REDG</span><span class="p">.</span><span class="n">DEMO_USER</span><span class="w"> </span><span class="p">(</span>
+<span class="w">  </span><span class="n">ID</span><span class="w">            </span><span class="nb">NUMBER</span><span class="p">(</span><span class="mi">19</span><span class="p">)</span><span class="w">        </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">USERNAME</span><span class="w">      </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">30</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">FIRST_NAME</span><span class="w">    </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">50</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">),</span>
+<span class="w">  </span><span class="n">LAST_NAME</span><span class="w">     </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">50</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">),</span>
+<span class="w">  </span><span class="n">WORKS_AT_CC</span><span class="w">   </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">),</span>
+<span class="w">  </span><span class="n">WORKS_AT_NAME</span><span class="w"> </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">30</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">),</span>
+<span class="w">  </span><span class="n">ACC_BIC</span><span class="w">       </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">11</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">ACC_IBAN</span><span class="w">      </span><span class="n">VARCHAR2</span><span class="p">(</span><span class="mi">22</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">  </span><span class="n">AGREED_TO_NEWSLETTER</span><span class="w"> </span><span class="nb">NUMBER</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">pk_DEMO_USER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ID</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_DEMO_USER_COMPANY</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">WORKS_AT_CC</span><span class="p">,</span><span class="w"> </span><span class="n">WORKS_AT_NAME</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">DEMO_COMPANY</span><span class="w"> </span><span class="p">(</span><span class="n">COUNTRY_CODE</span><span class="p">,</span><span class="w"> </span><span class="n">NAME</span><span class="p">),</span>
+<span class="w">  </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">fk_DEMO_USER_BANK_ACC</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">ACC_BIC</span><span class="p">,</span><span class="w"> </span><span class="n">ACC_IBAN</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">DEMO_BANK_ACCOUNT</span><span class="w"> </span><span class="p">(</span><span class="n">BIC</span><span class="p">,</span><span class="w"> </span><span class="n">IBAN</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+
+<p>This SQL code will create a schema that looks like this:
+<img alt="The demo schema" src="../img/demo-schema.png" />
+<span class="image-caption">The demo schema</span></p>
+<h3 id="type-mappings">Type Mappings<a class="headerlink" href="#type-mappings" title="Permanent link">&para;</a></h3>
+<p>When analysing a database schema, RedG always tries to find an appropriate Java data type for a column. There are three cases, where this might not be enough:</p>
+<ul>
+<li>You want a different Java data type that still represents the same database data type (eg. <code>long</code> instead of <code>BigDecimal</code> for <code>NUMBER(10)</code>)</li>
+<li>RedG cannot understand the semantic meaning of a column data type (eg. <code>NUMBER(1)</code> or <code>CHAR(1)</code> for <code>boolean</code>)</li>
+<li>You want to plug in a custom, maybe even far more complex, data type and use it instead of the default types</li>
+</ul>
+<p>If this happens, you can create a custom type mapping. When using the Maven plugin, you can simply specify that type mapping in a JSON file. For the demo schema from above you can use the following type mapping and save it in the file <code>src/test/resources/mappings.json</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;REDG.DEMO_USER&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Long&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;AGREED_TO_NEWSLETTER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Boolean&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;REDG.DEMO_COMPANY&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Long&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;REGISTRATION_DATE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;java.time.LocalDateTime&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>In this example, the <code>DEMO_USER</code> table gets its <code>ID</code> mapped as a <code>Long</code> (always use wrapper classes, not primitive types) and <code>AGREED_TO_NEWSLETTER</code> as a <code>Boolean</code>. 
+The <code>DEMO_COMPANY</code> gets the same mapping for the <code>ID</code> and gets the <code>REGISTRATION_DATE</code> as a <code>LocalDateTime</code>. For each class not in <code>java.lang</code> you have to provide the fully qualified class name.</p>
+<p>If your JDBC driver is not able to perform the transformations you want (<code>Boolean</code> to <code>NUMBER(1)</code> or <code>LocalDateTime</code> to <code>TIMESTAMP</code>), you have to provide a custom <code>PreparedStatementParameterSetter</code> during test runtime. If you want to generate SQL statements, you might need a custom <code>SQLValuesFormatter</code> during test runtime.</p>
+<h2 id="code-generation">Code generation<a class="headerlink" href="#code-generation" title="Permanent link">&para;</a></h2>
+<p>By now everything is ready for the first round of code generation. If you are using Maven, either run your whole test-suite with <code>mvn test</code> or just RedG with <code>mvn redg:redg@redg-generate</code>. If you are using Gradle, run your custom solution or wait until the release of the Gradle plugin. If no error occured, you should find the generated sources in <code>target/generated-test-sources/redg</code>.</p>
+<p><img alt="The generated code" src="../img/demo-generated-code.png" />
+<span class="image-caption">The generated code</span></p>
+<h2 id="test-data-specification">Test Data Specification<a class="headerlink" href="#test-data-specification" title="Permanent link">&para;</a></h2>
+<p>Now that RedG has generated the entity classes, you can create a RedG instance. 
+A good approach is to create a factory that will create <code>RedG</code> instances, so you don't have to configure the RedG instance every time you need one. </p>
+<p>An example for some test data:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyRedGFactory</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">RedG</span><span class="w"> </span><span class="nf">createRedG</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">RedG</span><span class="w"> </span><span class="n">redG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RedG</span><span class="p">();</span>
+<span class="w">        </span><span class="n">redG</span><span class="p">.</span><span class="na">setDefaultValueStrategy</span><span class="p">(</span><span class="n">createDefaultValueStrategy</span><span class="p">());</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">redG</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">DefaultValueStrategy</span><span class="w"> </span><span class="nf">createDefaultValueStrategy</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DefaultValueStrategyBuilder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DefaultValueStrategyBuilder</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="na">whenColumnNameMatches</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">thenUseProvider</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">IncrementingNumberProvider</span><span class="p">());</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="na">whenTableNameMatches</span><span class="p">(</span><span class="s">&quot;.*CARD&quot;</span><span class="p">).</span><span class="na">andColumnNameMatches</span><span class="p">(</span><span class="s">&quot;TYPE&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">thenUse</span><span class="p">(</span><span class="s">&quot;MASTERCARD&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="na">when</span><span class="p">(</span><span class="n">columnModel</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">columnModel</span><span class="p">.</span><span class="na">getDbFullTableName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;CCM.CREDITCARD.UUID&quot;</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">thenCompute</span><span class="p">((</span><span class="n">columnModel</span><span class="p">,</span><span class="w"> </span><span class="n">expectedType</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">UUID</span><span class="p">.</span><span class="na">randomUUID</span><span class="p">().</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">        </span><span class="c1">// ...</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">build</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Now you can model your test data. You might end up inlining the test data into your unit tests if it is not too complex.
+To make RedG insert the modeled data into the database, call <code>AbstractRedG.insertDataIntoDatabase(...)</code>. In most cases this dead simple approach is all you need. </p>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">...</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DemoTest</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@Test</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testStuff</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="c1">// instantiate RedG</span>
+<span class="w">        </span><span class="n">RedG</span><span class="w"> </span><span class="n">redG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyRedGFactory</span><span class="p">().</span><span class="na">createRedG</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// create some test data </span>
+<span class="w">        </span><span class="n">GDemoBankAccount</span><span class="w"> </span><span class="n">companyBankAccount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">redG</span><span class="p">.</span><span class="na">addDemoBankAccount</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">iban</span><span class="p">(</span><span class="s">&quot;DE13109817441665870952&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">GDemoCompany</span><span class="w"> </span><span class="n">smallCompany</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">redG</span><span class="p">.</span><span class="na">addDemoCompany</span><span class="p">(</span><span class="n">companyBankAccount</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">countryCode</span><span class="p">(</span><span class="s">&quot;DE&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">name</span><span class="p">(</span><span class="s">&quot;Spielwarenfachgeschäft Müller&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">redG</span><span class="p">.</span><span class="na">addDemoUser</span><span class="p">(</span><span class="n">redG</span><span class="p">.</span><span class="na">dummyDemoBankAccount</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">username</span><span class="p">(</span><span class="s">&quot;Diana_Dummy&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">company</span><span class="p">(</span><span class="n">smallCompany</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// insert the data into the database using a javax.sql.DataSource</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">DemoTestData</span><span class="p">().</span><span class="na">getDataSet</span><span class="p">().</span><span class="na">insertDataIntoDatabase</span><span class="p">(</span><span class="n">dataSource</span><span class="p">);</span><span class="w"> </span>
+
+<span class="w">        </span><span class="c1">// perform your actual test against the database...</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="debugging-with-the-visualizer">Debugging with the visualizer<a class="headerlink" href="#debugging-with-the-visualizer" title="Permanent link">&para;</a></h2>
+<p>If your generated RedG entity classes have the visualization support enabled, debugging RedG is extremely
+simple and comfortable. Add a breakpoint wherever you want to inspect the current RedG dataset and let the
+code run until there. Once it reached the breakpoint, evaluate the <code>getVisualizationJson()</code> method on your RedG
+main object. This method will return a big JSON string. Copy it into your clipboard or export it into a file
+and paste/drag it into the <a href="../visualizer/">RedG Visualizer</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Yann Massard</span>&emsp;&emsp;<a href="https://yamass.github.io/redg/about/imprint.html">Impressum / Imprint</a>&emsp; Unless stated otherwise, the <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">RedG User Documentation</span> is made available under CC-BY-SA 4.0 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="vertical-align:text-bottom" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
